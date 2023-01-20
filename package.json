@@ -12,5 +12,9 @@
     "nuxt-vite": "^0.3.5",
     "sass": "^1.57.1",
     "sass-loader": "^13.2.0"
+  },
+  "dependencies": {
+    "nuxt-gsap-module": "^1.7.2",
+    "vue-router": "4"
   }
 }

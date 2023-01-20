@@ -4,24 +4,30 @@
       <p class="logo">SIL:VER</p>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/">Home</nuxt-link></li>
+          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/shop">Shop</nuxt-link></li>
+          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/">About</nuxt-link></li>
+          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/">Contact</nuxt-link></li>
         </ul>
       </nav>
     </header>
-    <div class="header-line"></div>
+    <div :class="[isDark ? 'header-line_dark' : 'header-line_light' ,'header-line']"></div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Header',
+  props: {
+    isDark: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {};
   },
-  methods: {},
 };
 </script>
 
@@ -41,13 +47,20 @@ export default {
   }
 }
 .header-line{
-  width: 100vw;
+  width: 0;
   height: 1px;
   background: $color-white;
   position: absolute;
   bottom: 0;
   left: 0;
 }
+.header-line_dark{
+  background: $color-black;
+}
+.header-line_light{
+  background: $color-white;
+}
+
 header {
   height: 80px;
   margin: 0 auto;

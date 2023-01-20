@@ -1,78 +1,65 @@
-
-*, *::after, *::after{
+*,
+*::after,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // border: 1px solid green;
 }
 
-body{
+body {
     background-color: $color-white;
 }
 
-.wrapper-body{
+.wrapper-body {
     padding: 0 80px;
-    @include respoM{
+
+    @include respoM {
         padding: 0 20px;
     }
 }
 
-#wrapper-index{
-    min-height: 720px;
-    .line-horizontal-page{
-        position: absolute;
-        width: 100vw;
-        height: 1px;
-        background: $color-white;
-    }
-    .line-horizontal-page_middle{
-        bottom: calc(360px + 80px);
-        right: -80px;
-        @media screen and (min-width : 1920px) {
-            right: calc(((100vw - 1920px) / 2) - ((100vw - 1920px) / 2) * 2);
-        }
-    }
-    .line-horizontal-page_bottom{
-        bottom: 80px;
-        left: -80px;
-        @media screen and (min-width : 1920px) {
-            left: calc(((100vw - 1920px) / 2) - ((100vw - 1920px) / 2) * 2);
-        }
-    }
-}
 
-.wrapper-pages{
+
+.wrapper-pages {
     width: 100%;
     margin: 0 auto;
     min-height: 100vh;
     max-width: 1920px;
     position: relative;
-    @include respoM{
+
+    @include respoM {
         border-left: none;
         border-right: none;
     }
-    .line-vertical-page{
-        height: 100vh;
+
+    .line-vertical-page {
+        height: 0;
         width: 1px;
-        background: $color-white;
+        background: $color-black;
         position: fixed;
     }
-    .line-vertical-page_left{
+
+    .line-vertical-page_left {
         top: 0;
         left: 80px;
-        @include respoM{
+
+        @include respoM {
             left: 20px;
         }
+
         @media screen and (min-width : 1920px) {
             left: calc((100vw - 1920px) / 2);
         }
     }
-    .line-vertical-page_right{
+
+    .line-vertical-page_right {
         bottom: 0;
         right: 80px;
-        @include respoM{
+
+        @include respoM {
             right: 20px;
         }
+
         @media screen and (min-width : 1920px) {
             right: calc((100vw - 1920px) / 2);
         }

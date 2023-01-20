@@ -1,28 +1,63 @@
-
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-new-york;
   color: $color-white;
   font-weight: normal;
 }
 
-p, span, a{
+p,
+span,
+a {
   font-family: $font-roboto-regular;
 }
 
-ul, ol{
+ul,
+ol {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: $color-white;
 }
 
-h1{
+.links {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    z-index: 1;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.links_light::before {
+  background: $color-white;
+}
+.links_dark::before {
+  background: $color-black;
+}
+
+h1 {
   font-size: clamp(2rem, 4.5vw, 5rem);
   line-height: clamp(2rem, 4.5vw, 5rem);
 }
-h2{
+
+h2 {
   font-size: clamp(1.5rem, 3vw, 4rem);
   line-height: clamp(1.5rem, 3vw, 4rem);
 }
