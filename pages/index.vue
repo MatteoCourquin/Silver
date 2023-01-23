@@ -1,12 +1,12 @@
 <template>
   <div id="wrapper-index" class="wrapper-body">
     <img src='~/assets/images/background-body.jpg' class="background-index" />
+    <Header :isDark=isDark />
     <div class="wrapper-pages">
       <div class="line-vertical-page line-vertical-page_right"></div>
       <div class="line-vertical-page line-vertical-page_left"></div>
       <div class="line-horizontal-page line-horizontal-page_middle"></div>
       <div class="line-horizontal-page line-horizontal-page_bottom"></div>
-      <Header :isDark=isDark />
       <Hero />
     </div>
   </div>
@@ -31,7 +31,7 @@ export default {
 
 
       tl
-        .to('.background-index', { opacity: 1, duration: 2, ease: 'power4.out' })
+        .to('.background-index', { opacity: 1, duration: 1.5, ease: 'power4.out' })
         .to('.background-index', { scaleX: 1, scaleY: 1, duration: 6, ease: 'power4.out' }, '-=2')
         .to('.header-line', { width: '100vw', duration: 4, ease: 'power4.out' }, '-=5')
         .to('.line-horizontal-page_middle', { width: '100vw', duration: 4, ease: 'power4.out' }, '-=5')
@@ -72,7 +72,6 @@ export default {
 
 #wrapper-index {
   min-height: 720px;
-
   .line-vertical-page {
     background: $color-white;
   }
@@ -95,6 +94,10 @@ export default {
     @media screen and (min-width : 1920px) {
       right: calc(((100vw - 1920px) / 2) - ((100vw - 1920px) / 2) * 2);
     }
+
+    @include respoM {
+      right: -20px;
+    }
   }
 
   .line-horizontal-page_bottom {
@@ -103,6 +106,10 @@ export default {
 
     @media screen and (min-width : 1920px) {
       left: calc(((100vw - 1920px) / 2) - ((100vw - 1920px) / 2) * 2);
+    }
+    
+    @include respoM {
+      left: -20px;
     }
   }
 }

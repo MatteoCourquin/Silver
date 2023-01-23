@@ -25,13 +25,8 @@
       <div class="hero-star-wrapper">
         <div class="line-hero-star"></div>
         <div class="hero-star">
-          <div class="anim-hero-star">
-            <svg id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.5 282.5">
-              <path class="cls-1" fill="#f4efe8"
-                d="M0,141.75c46.88-5.58,94.11-6.8,141.25-7,47.14,.17,94.37,1.39,141.25,7-46.88,5.61-94.11,6.83-141.25,7-47.14-.2-94.37-1.42-141.25-7H0Z" />
-              <path class="cls-1" fill="#f4efe8"
-                d="M144.5,0c5.58,46.88,6.8,94.11,7,141.25-.17,47.14-1.39,94.37-7,141.25-5.61-46.88-6.83-94.11-7-141.25,.2-47.14,1.42-94.37,7-141.25h0Z" />
-            </svg>
+          <div class='anim-hero-star'>
+            <img class="anim-rotate" src="~/assets/images/icons/star-4.svg" alt="">
           </div>
         </div>
       </div>
@@ -57,14 +52,26 @@ export default {
   height: 100vh;
   overflow: hidden;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    color: $color-white;
+  }
+
   .hero {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 200px;
     grid-template-rows: 1fr 360px 80px;
-
+    
     @include respoXL {
       grid-template-rows: 1fr 250px 80px;
+      grid-template-columns: 1fr 150px;
     }
   }
 }
@@ -108,12 +115,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    .anim-hero-star{
+
+    .anim-hero-star {
       transform: translateY(200%);
-    }
-    #star {
       width: 80px;
-      animation: rotation 6s infinite linear;
     }
   }
 }
@@ -121,6 +126,11 @@ export default {
 .hero-wrapper-title-description {
   display: flex;
   grid-row: 2/3;
+
+  @include respoM {
+    grid-row: 2/3;
+    flex-direction: column;
+  }
 
   .hero-description {
     padding: clamp(50px, 5vw, 100px);
@@ -147,6 +157,7 @@ export default {
       right: 0;
       background: $color-white;
     }
+
   }
 
   .hero-title {

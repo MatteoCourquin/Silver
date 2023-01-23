@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // border: 1px solid green;
 }
 
 body {
@@ -35,8 +36,8 @@ body {
     .line-vertical-page {
         height: 0;
         width: 1px;
-        background: $color-black;
         position: fixed;
+        z-index: 60;
     }
 
     .line-vertical-page_left {

@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
   font-family: $font-new-york;
-  color: $color-white;
+  color: $color-black;
   font-weight: normal;
 }
 
@@ -23,6 +23,22 @@ ol {
 a {
   text-decoration: none;
   color: $color-white;
+}
+
+.links-array{
+  color: $color-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg{
+    margin-left: 5px;
+    transition: all 0.3s ease;
+  }
+  &:hover{
+    svg{
+      transform: translateX(5px);
+    }
+  }
 }
 
 .links {
@@ -45,11 +61,17 @@ a {
   }
 }
 
-.links_light::before {
-  background: $color-white;
+.links_light {
+  color: $color-white;
+  &::before {
+    background: $color-white;
+  }
 }
-.links_dark::before {
-  background: $color-black;
+.links_dark {
+  color: $color-black;
+  &::before {
+    background: $color-black;
+  }
 }
 
 h1 {

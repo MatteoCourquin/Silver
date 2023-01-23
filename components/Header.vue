@@ -1,13 +1,13 @@
 <template>
   <div class="wrapper-header">
-    <header>
-      <p class="logo">SIL:VER</p>
+    <header :class="[isDark ? 'header_dark' : 'header_light']">
+      <p :class="[isDark ? 'logo_dark' : 'logo_light' ,'logo']">SIL:VER</p>
       <nav>
         <ul>
-          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/">Home</nuxt-link></li>
-          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/shop">Shop</nuxt-link></li>
-          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/">About</nuxt-link></li>
-          <li><nuxt-link :class="[isDark ? 'links_dark' : 'links_light', 'links']" to="/">Contact</nuxt-link></li>
+          <li><a :class="[isDark ? 'links_dark' : 'links_light', 'links']" href="/">Home</a></li>
+          <li><a :class="[isDark ? 'links_dark' : 'links_light', 'links']" href="/shop">Shop</a></li>
+          <li><a :class="[isDark ? 'links_dark' : 'links_light', 'links']" href="/about">About</a></li>
+          <li><a :class="[isDark ? 'links_dark' : 'links_light', 'links']" href="/contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -36,7 +36,7 @@ export default {
 @import '~/assets/style/scss/main.scss';
 
 .wrapper-header{
-  z-index: 999;
+  z-index: 50;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -49,7 +49,6 @@ export default {
 .header-line{
   width: 0;
   height: 1px;
-  background: $color-white;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -61,6 +60,12 @@ export default {
   background: $color-white;
 }
 
+.header_light{
+  background: transparent !important;
+}
+.header_dark{
+  background: $color-white;
+}
 header {
   height: 80px;
   margin: 0 auto;
@@ -71,8 +76,13 @@ header {
   padding: 0 clamp(20px, 2vw, 40px);
   .logo {
     font-family: $font-new-york;
-    color: $color-white;
     font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  .logo_dark{
+    color: $color-black;
+  }
+  .logo_light{
+    color: $color-white;
   }
   nav ul{
     display: flex;
