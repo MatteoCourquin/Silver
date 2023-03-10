@@ -1,4 +1,3 @@
-
 @mixin absolute ($top, $right, $bottom, $left, $x, $y) {
     position: absolute;
     top: $top;
@@ -6,31 +5,43 @@
     bottom: $bottom;
     left: $left;
     transform: translate($x, $y);
-};
+}
+
+;
 
 @mixin size($width, $height) {
     width: $width;
     height: $height;
-};
+}
+
+;
 
 @mixin respoXS {
-    @media screen and (max-width: 400px){
+    @media screen and (max-width: 400px) {
         @content
     }
-};
+}
+
+;
 
 @mixin respoM {
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
         @content
     }
-};
+}
+
+;
 
 @mixin respoXL {
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1200px) {
         @content
     }
-};
+}
 
+;
 
-// How to use:
-// @include size(100%, 100%)
+@mixin fullScreen {
+    @media screen and (min-width: 2080px) {
+        @content
+    }
+}

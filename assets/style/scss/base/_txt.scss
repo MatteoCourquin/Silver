@@ -30,6 +30,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
+  font-family: $font-roboto-regular;
+  font-size: 1.2rem;
   svg{
     margin-left: 5px;
     transition: all 0.3s ease;

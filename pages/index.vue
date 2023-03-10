@@ -91,7 +91,7 @@ export default {
       bottom: calc(250px + 80px);
     }
 
-    @media screen and (min-width : 1920px) {
+    @include fullScreen {
       right: calc(((100vw - 1920px) / 2) - ((100vw - 1920px) / 2) * 2);
     }
 
@@ -104,7 +104,7 @@ export default {
     bottom: 80px;
     left: -80px;
 
-    @media screen and (min-width : 1920px) {
+    @include fullScreen {
       left: calc(((100vw - 1920px) / 2) - ((100vw - 1920px) / 2) * 2);
     }
     

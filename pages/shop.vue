@@ -62,7 +62,6 @@ export default {
   .line-vertical-page {
     background: $color-black;
   }
-
 }
 
 </style>
