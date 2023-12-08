@@ -20,19 +20,19 @@
         </div>
         <div class="wrapper-shop-image">
           <div class="line-vertical-shop-image line-vertical-shop-1"></div>
-          <img class="image-shop-anim-1" src='~/assets/images/shop/illustration1.jpg' />
+          <img class="image-shop-anim-1" src='/images/shop/illustration1.jpg' />
         </div>
       </div>
       <div class="shop-bottom">
         <div class="wrapper-shop-image">
           <div class="line-vertical-shop-image line-vertical-shop-2"></div>
-          <img class="image-shop-anim-2" src='~/assets/images/shop/illustration2.jpg' />
+          <img class="image-shop-anim-2" src='/images/shop/illustration2.jpg' />
         </div>
         <div class="wrapper-shop-description">
           <h2 class="title-anim title-anim-2">NECKLESS</h2>
           <p class="text-anim text-anim-3">To highlight your <br>neck shape and curves</p>
           <div class="wrapper-star">
-            <img class="anim-rotate" src="~/assets/images/icons/star-8.svg" alt="" />
+            <img class="anim-rotate" src="/images/icons/star-8.svg" alt="" />
           </div>
         </div>
       </div>
@@ -53,12 +53,14 @@ export default {
 <style scoped lang="scss">
 @import '~/assets/style/scss/main.scss';
 
-.wrapper-shop-description{
+.wrapper-shop-description {
   overflow: hidden;
+
   .title-anim {
-    transform: translateX(-100%);
+    transform: translateX(-110%);
   }
-  .text-anim{
+
+  .text-anim {
     opacity: 0;
   }
 }
@@ -69,10 +71,11 @@ export default {
   position: relative;
   height: 100%;
   overflow: hidden;
+
   .image-shop-anim-1 {
     transform: translate(110%, 110%);
   }
-  
+
   .image-shop-anim-2 {
     transform: translateY(110%);
   }
@@ -86,6 +89,7 @@ export default {
   height: 0;
   background-color: $color-black;
 }
+
 .line-vertical-shop-1 {
   left: 0;
 }
@@ -165,7 +169,7 @@ img {
         overflow: hidden;
 
         @include respoXL {
-          p{
+          p {
             width: 50%;
           }
         }
@@ -206,7 +210,8 @@ img {
       p {
         line-height: 1.6rem;
       }
-      .wrapper-star{
+
+      .wrapper-star {
         padding: 20px;
         width: 120px;
         height: 120px;

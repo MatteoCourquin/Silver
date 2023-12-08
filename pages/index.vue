@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper-index" class="wrapper-body">
-    <img src='~/assets/images/background-body.jpg' class="background-index" />
+    <img src='/images/background-body.jpg' class="background-index" />
     <Header :isDark=isDark />
     <div class="wrapper-pages">
       <div class="line-vertical-page line-vertical-page_right"></div>
@@ -13,13 +13,10 @@
 </template>
 
 <script>
-import Header from '~/components/Header.vue';
-import Hero from '~/components/Hero.vue';
 import gsap from 'gsap';
 
 export default {
   name: "IndexPage",
-  components: { Hero, Header },
   data() {
     return {
       isDark: false,
@@ -72,6 +69,7 @@ export default {
 
 #wrapper-index {
   min-height: 720px;
+
   .line-vertical-page {
     background: $color-white;
   }
@@ -107,7 +105,7 @@ export default {
     @include fullScreen {
       left: calc(((100vw - 1920px) / 2) - ((100vw - 1920px) / 2) * 2);
     }
-    
+
     @include respoM {
       left: -20px;
     }

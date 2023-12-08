@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper-header">
     <header :class="[isDark ? 'header_dark' : 'header_light']">
-      <p :class="[isDark ? 'logo_dark' : 'logo_light' ,'logo']">SIL:VER</p>
+      <a href="/" :class="[isDark ? 'logo_dark' : 'logo_light' ,'logo']">SIL:VER</a>
       <nav>
         <ul>
           <li><a :class="[isDark ? 'links_dark' : 'links_light', 'links']" href="/">Home</a></li>

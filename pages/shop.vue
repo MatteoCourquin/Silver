@@ -11,13 +11,10 @@
 
 <script>
 
-import Header from '~/components/Header.vue';
-import Shop from '~/components/Shop.vue';
 import gsap from 'gsap';
 
 export default {
   name: 'shop',
-  components: { Header, Shop },
   data() {
     return {
       isDark: true,
@@ -55,7 +52,6 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-
 @import '~/assets/style/scss/main.scss';
 
 #wrapper-shop {
@@ -63,5 +59,4 @@ export default {
     background: $color-black;
   }
 }
-
 </style>

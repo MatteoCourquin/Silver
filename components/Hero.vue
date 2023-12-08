@@ -26,7 +26,7 @@
         <div class="line-hero-star"></div>
         <div class="hero-star">
           <div class='anim-hero-star'>
-            <img class="anim-rotate" src="~/assets/images/icons/star-4.svg" alt="">
+            <img class="anim-rotate" src="/images/icons/star-4.svg" alt="">
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default {
   overflow: hidden;
 
   .anim-hero-version {
-    transform: translateY(-200%);
+    transform: translateY(-220%);
   }
 }
 

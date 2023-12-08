@@ -29,7 +29,7 @@
       <div class="line-vertical-footer line-vertical-footer_2"></div>
       <div class="about-star">
         <div class='anim-about-star'>
-          <img class="anim-rotate" src="~/assets/images/icons/star-8.svg" alt="">
+          <img class="anim-rotate" src="/images/icons/star-8.svg" alt="">
         </div>
       </div>
       <div class="line-horizontal-footer"></div>
@@ -134,7 +134,7 @@ export default {
 
   .titles-about {
     .image-about {
-      background-image: url('assets/images/about/illustration1.jpg');
+      background-image: url('/images/about/illustration1.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;

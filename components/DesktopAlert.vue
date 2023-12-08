@@ -21,7 +21,7 @@ export default {
 @import '~/assets/style/scss/main.scss';
 
 .wrapper-desktop-alert{
-  background-image: url('assets/images/background-body.jpg');
+  background-image: url('/images/background-body.jpg');
   background-size: cover;
   background-position: center;
   position: fixed;

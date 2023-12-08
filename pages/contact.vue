@@ -4,18 +4,16 @@
     <div class="wrapper-pages">
       <div class="line-vertical-page line-vertical-page_right"></div>
       <div class="line-vertical-page line-vertical-page_left"></div>
-      <p>contact</p>
+      <Contact />
     </div>
   </div>
 </template>
 
 <script>
-import Header from '~/components/Header.vue';
 import gsap from 'gsap';
 
 export default {
   name: 'contact',
-  components: { Header },
   data() {
     return {
       isDark: true,
