@@ -1,8 +1,12 @@
 <template>
   <div class="wrapper-contact">
     <div class="contact-top">
-      <h1>CONTACT US</h1>
-      <p>natural.soap@gmail.com</p>
+      <div class="wrapper-text">
+        <h1 class="text-1">CONTACT US</h1>
+      </div>
+      <div class="wrapper-text">
+        <p class="text-2">natural.soap@gmail.com</p>
+      </div>
       <div class="line-horizontal-contact"></div>
     </div>
     <div class="contact-bottom">
@@ -15,14 +19,14 @@
         <div class="line-horizontal-contact-infos"></div>
         <div class="line-veritcal-contact-infos"></div>
         <div class="container-infos">
-          <h2>ADRESS</h2>
-          <div class="infos">
+          <h2 class="infos infos_1">ADRESS</h2>
+          <div class="infos infos_2">
             <p>Vitkin Street 14, Tev-Aviv, Israel</p>
           </div>
         </div>
         <div class="container-infos">
-          <h2>PHONE</h2>
-          <div class="infos">
+          <h2 class="infos infos_3">PHONE</h2>
+          <div class="infos infos_4">
             <p>+38 (093) 019 15 50</p>
           </div>
         </div>
@@ -43,6 +47,20 @@ export default {
 
 <style scoped lang="scss">
 @import '~/assets/style/scss/main.scss';
+
+.wrapper-text{
+  overflow: hidden;
+  h1, p {
+    transform: translateY(-100%);
+  }
+}
+
+.img-wrapper{
+  transform: translateY(200%);
+}
+.infos{
+  transform: translateX(-200%);
+}
 
 .wrapper-contact {
   padding-top: 80px;
@@ -69,7 +87,7 @@ export default {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 1px;
     background-color: $color-black;
   }
@@ -88,9 +106,9 @@ export default {
     .line-veritcal-contact-image {
       position: absolute;
       right: 0;
-      bottom: 0;
+      top: 0;
       width: 1px;
-      height: 100%;
+      height: 0;
       background-color: $color-black;
     }
 
@@ -111,8 +129,9 @@ export default {
 
     .line-horizontal-contact-infos {
       position: absolute;
-      width: 100%;
+      width: 0;
       top: 100px;
+      right: 0;
       height: 1px;
       background-color: $color-black;
     }
@@ -121,13 +140,15 @@ export default {
       position: absolute;
       right: 50%;
       width: 1px;
-      height: 100%;
+      bottom: 0;
+      height: 0;
       background-color: $color-black;
     }
 
     .container-infos {
       display: grid;
       grid-template-rows: 100px 1fr;
+      overflow: hidden;
 
       h2 {
         height: 100px;

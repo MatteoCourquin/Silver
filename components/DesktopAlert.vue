@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper-desktop-alert">
     <h1>This website is only avaible on Desktop</h1>
-    <p>Designed by <a href="https://dribbble.com/TheGlyphStudio" target="_blank">The Glyph Studio</a></p>
+    <p>Designed by <a class="links links_light" href="https://dribbble.com/TheGlyphStudio" target="_blank">The Glyph Studio</a></p>
   </div>
 </template>
 
